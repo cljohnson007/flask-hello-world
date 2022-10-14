@@ -1,5 +1,5 @@
 variable "profile" {
-    default                  = "default"
+    default                  = "dynatron"
     description              = "AWS Profile"
 }        
 variable "region" {       
@@ -11,7 +11,7 @@ variable "vpc_name" {
     description              = "VPC Name"
 }
 variable "env" {
-    default                  = "dynatron_prod"
+    default                  = "dynatron_challenge"
 }
 variable "cidr_block" {
     default                  = "172.16.0.0/23"

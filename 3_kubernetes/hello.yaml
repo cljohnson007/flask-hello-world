@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynatron-challenge
+  labels:
+    app: dynatron
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynatron
+  template:
+    metadata:
+      labels:
+        app: dynatron
+    spec:
+      containers:
+      - name: dynatron
+        image: 025981487620.dkr.ecr.us-east-2.amazonaws.com/dynatron:latest
+        ports:
+        - containerPort: 8080

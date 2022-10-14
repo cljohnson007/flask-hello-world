@@ -60,7 +60,6 @@ This repository orgainized in the following Directory Structure:
 This is a simple deployment.
 ####
 ###
-#### `# kubectl get ingress`  to get the LoadBalancer Address.
 ####
 The submitted will demonstrate to pertinent parties, my abilities, skills and comprehenion
 of technologies used in this exercise. This was CERTAINLY FUN! I look forward to discussing other methods not demonstrated here soon! To include Git-Action workflows for Automation!

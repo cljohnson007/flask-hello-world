@@ -21,7 +21,7 @@ This repository orgainized in the following Directory Structure:
 - Creates an EKS Cluster named "dynatron-cluster"
 ####
 ####
-### Issue the following COMMANDS inside the terraform Directory:
+### Issue the following COMMANDS inside the 1_infrastructure Directory:
 #### `# terraform init`
 ####
 #### `# terraform plan`
@@ -30,12 +30,11 @@ This repository orgainized in the following Directory Structure:
 #
 ##
 ## `2_app`
-- Provisions the Ingress Contoller and AWS Classic LoadBalancer
-- Provisions an Ingress Service to route traffic to the search-api and graph-api services
+- Compiles the app and Builds a Docker image
 ####
 ####
-### Issue the following commands inside the k8s Directory:
-#### `# kubectl apply -f ingress-controller.yaml`
+### Issue the following COMMANDS inside the 2_app Directory:
+#### `# docker build -t dynatron .`
 #### `# kubectl apply -f ingress-service.yaml`
 #
 ##

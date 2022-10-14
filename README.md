@@ -55,16 +55,5 @@ This repository orgainized in the following Directory Structure:
 ##
 ## `DELETE AWS INFRA`
 - IMPORTANT
-- Delete EKS CLUSTER and AWS REOURCES LAST!!!
+- Delete IMAGE IN ECR FIRST!!!
   - `# terraform destroy`             
-
-
-#
-This is a simple deployment.
-####
-###
-####
-The submitted will demonstrate to pertinent parties, my abilities, skills and comprehenion
-of technologies used in this exercise. This was CERTAINLY FUN! I look forward to discussing other methods not demonstrated here soon! To include Git-Action workflows for Automation!
-####
-Thank You!

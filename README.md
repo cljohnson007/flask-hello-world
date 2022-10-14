@@ -15,14 +15,13 @@ This repository orgainized in the following Directory Structure:
 #
 ##
 ## `1_infrastructure`
-- Creates an AWS VPC with a CIDR 10.0.0.0/16
-- 3 Private Subnets 10.0.1.0/24, 10.0.2.0/24, 10.0.3.0/24
-- 3 Private Subnets 10.0.101.0/24, 10.0.102.0/24, 10.0.103.0/24
-- 3 NAT Gateways associated with each Private Subnets
-- Creates an EKS Cluster named altana with public endpoint enabled
+- Creates an AWS VPC with a CIDR 172.16.0.0/23
+- 2 Private Subnets 172.16.0.0/25 and 172.16.0.128/25
+- 2 Public Subnets 172.16.1.0/25 and 172.16.1.128/25
+- Creates an EKS Cluster named "dynatron-cluster"
 ####
 ####
-### Issue the following commands inside the terraform Directory:
+### Issue the following COMMANDS inside the terraform Directory:
 #### `# terraform init`
 ####
 #### `# terraform plan`
@@ -30,7 +29,7 @@ This repository orgainized in the following Directory Structure:
 #### `# terraform apply`
 #
 ##
-## `k8s`
+## `2_app`
 - Provisions the Ingress Contoller and AWS Classic LoadBalancer
 - Provisions an Ingress Service to route traffic to the search-api and graph-api services
 ####

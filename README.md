@@ -12,7 +12,6 @@ This repository orgainized in the following Directory Structure:
 ## `2_app`
 
 ## `3_kubernetes`
-#
 ##
 ## `1_infrastructure`
 - Creates an AWS VPC with a CIDR 172.16.0.0/23
@@ -30,13 +29,14 @@ This repository orgainized in the following Directory Structure:
 #
 ##
 ## `2_app`
-- Compiles the app and Builds a Docker image
+- Compiles the app and Builds a Docker Image
 ####
 ####
 ### Issue the following COMMANDS inside the 2_app Directory:
 #### `# docker build -t dynatron .`
-#### `# docker tag dynatron:latest aws_account_id.dkr.ecr.us-east-2.amazonaws.com/dynatron:latest`
-#### `# docker push aws_account_id.dkr.ecr.region.amazonaws.com/dynatron:latest`
+#### `# aws ecr get-login-password --region us-east-2 --profile $YOUR_AWS_PROFILE | docker login --username AWS --password-stdin $YOUR_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com`
+#### `# docker tag dynatron:latest $YOUR_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/dynatron:latest`
+#### `# docker push $YOUR_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/dynatron:latest`
 #
 ##
 ## `3_kubernetes`
@@ -45,7 +45,10 @@ This repository orgainized in the following Directory Structure:
 ####
 ####
 ### Issue the following commands inside the helm Directory:
+#### `# aws eks update-kubeconfig --region us-east-2 --name dynatron-cluster --profile $YOUR_AWS_PROFILE`
 #### `# kubectl apply -f hello.yaml `
+#### `# kubectl get pods`
+#### `# kubectl port-forward $YOUR_KUBERNETES_POD 8080:8080`
 #
 ##
 

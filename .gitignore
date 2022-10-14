@@ -6,7 +6,7 @@
 # /env/ denotes only the root level ./env folder be ignored
 # env/ denotes ANY env folder be ignored, even in ./some/deep/folder/env
 # Sames goes for files
-
+/1_infrastructure/.terraform/
 # OS Files
 .DS_Store
 ._.DS_Store

@@ -35,29 +35,24 @@ This repository orgainized in the following Directory Structure:
 ####
 ### Issue the following COMMANDS inside the 2_app Directory:
 #### `# docker build -t dynatron .`
-#### `# kubectl apply -f ingress-service.yaml`
+#### `# docker tag dynatron:latest aws_account_id.dkr.ecr.us-east-2.amazonaws.com/dynatron:latest`
+#### `# docker push aws_account_id.dkr.ecr.region.amazonaws.com/dynatron:latest`
 #
 ##
-## `helm`
-- Deploys 2 kubenetes Deployments 
-  - search-api
-  - graph-api
+## `3_kubernetes`
+- Deploys 1 kubenetes Deployments 
+  - dynatron-deployment
 - Each Deployment has a corespnding ClusterIP Service tat will connect to a shared Ingress Service
 ####
 ####
 ### Issue the following commands inside the helm Directory:
-#### `# helm install search-api search-api`
-####
-#### `# helm install graph-api graph-api`
+#### `# kubectl apply -f hello.yaml `
 #
 ##
 
 ##
 ## `DELETE AWS INFRA`
 - IMPORTANT
-- Delete Ingress Controller and Ingress Service FIRST!!!
-  - `# kubectl delete -f ingress-controller.yaml`
-  - `# kubectl delete -f ingress-service.yaml`
 - Delete EKS CLUSTER and AWS REOURCES LAST!!!
   - `# terraform destroy`             
 

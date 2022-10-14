@@ -32,6 +32,7 @@ This repository orgainized in the following Directory Structure:
 - Compiles the app and Builds a Docker Image
 ####
 ####
+### PLEASE DEPLOY IN US-EAST-2 REGION FOR EASE
 ### Issue the following COMMANDS inside the 2_app Directory:
 #### `# docker build -t dynatron .`
 #### `# aws ecr get-login-password --region us-east-2 --profile $YOUR_AWS_PROFILE | docker login --username AWS --password-stdin $YOUR_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com`

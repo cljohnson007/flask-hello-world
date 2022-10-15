@@ -50,7 +50,7 @@ This repository orgainized in the following Directory Structure:
 #### `# kubectl apply -f hello.yaml `
 #### `# kubectl get pods`
 #### `# kubectl port-forward $YOUR_KUBERNETES_POD 8080:8080`
-#
+# ACCESS localhost:8080
 ##
 
 ##
